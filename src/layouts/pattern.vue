@@ -54,7 +54,8 @@ export default {
   components: { Layout, LayoutPattern, PatternControls, VueCodeHighlight },
   props: {
     title: String,
-    component: Object
+    component: Object,
+    sourceCode: String
   },
   data () {
     return {
@@ -63,9 +64,6 @@ export default {
     }
   },
   computed: {
-    sourceCode () {
-      return this.component.methods.draw.toString()
-    },
     doc () {
       return this.component.__doc
     }
